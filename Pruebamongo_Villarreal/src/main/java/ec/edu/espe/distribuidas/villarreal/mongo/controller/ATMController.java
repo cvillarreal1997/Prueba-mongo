@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.distribuidas.villarreal.mongo.service.controller;
+package ec.edu.espe.distribuidas.villarreal.mongo.controller;
 
 import ec.edu.espe.distribuidas.villarreal.mongo.model.ATM;
 import ec.edu.espe.distribuidas.villarreal.mongo.service.ATMService;

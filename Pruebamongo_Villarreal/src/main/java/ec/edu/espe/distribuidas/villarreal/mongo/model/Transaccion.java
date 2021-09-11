@@ -6,14 +6,26 @@
 package ec.edu.espe.distribuidas.villarreal.mongo.model;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  *
  * @author terry
  */
+@Data
+@Document(collection = "transaccion")
 public class Transaccion {
-     BigDecimal cantidadretiro;
-     BigDecimal cantidaddepositada;
-     
+    @Id
+    private String id;
+    private String codigoCajero;
+    private String tipo;
+    private BigDecimal monto;
+    private Integer dinero10;
+    private Integer dinero20;
+    private LocalDateTime fecha;
+    private String estado;
     
 }
