@@ -21,8 +21,11 @@ public class ATMService {
         this.atmRepo = atmRepo;
     }
     
-     public List<ATM> findByMonto(Integer monto) {
-        return this.atmRepo.findByMonto(monto);
+     public List<ATM> findByCantidad(Integer cantidad) {
+        return this.atmRepo.findByCantidad(cantidad);
+    }
+     public List<ATM> listAll(){
+        return this.atmRepo.listAll();
     }
     
 }

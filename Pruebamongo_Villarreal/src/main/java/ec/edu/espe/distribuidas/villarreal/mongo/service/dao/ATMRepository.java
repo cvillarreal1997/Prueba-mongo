@@ -15,5 +15,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @author terry
  */
 public interface ATMRepository extends MongoRepository<ATM, String> {
-   List<ATM> findByMonto (Integer cantidad);
+   List<ATM> findByCantidad (Integer cantidad);
+   List<ATM> listAll(); 
 }

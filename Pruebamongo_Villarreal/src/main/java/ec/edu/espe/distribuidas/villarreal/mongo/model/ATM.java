@@ -21,4 +21,5 @@ public class ATM {
     private String id;
     private String nombre;
     private Integer cantidad;
+     private Integer disponible;
 }

@@ -5,7 +5,7 @@
  */
 package ec.edu.espe.distribuidas.villarreal.mongo.service.controller;
 
-import ec.edu.espe.distribuidas.villarreal.mongo.model.Atm;
+import ec.edu.espe.distribuidas.villarreal.mongo.model.ATM;
 import ec.edu.espe.distribuidas.villarreal.mongo.service.ATMService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -40,10 +40,10 @@ public class ATMController {
     public ResponseEntity getMonto(
             @PathVariable("monto") Integer monto) {
         try {
-            List<Cajeroatm> cajeros = this.service.listAll();
-            List<Cajeroatm> cajerosMonto = this.service.findByMonto(monto);
-            for(Cajeroatm i: cajeros){
-                if(i.getDineroDisponible() < monto ){
+            List<ATM> cajeros = this.service.listAll();
+            List<ATM> cajerosMonto = this.service.findByCantidad(monto);
+            for(ATM i: cajeros){
+                if(i.getDisponible()< monto ){
                     cajerosMonto.add(i);
                 }
             }
